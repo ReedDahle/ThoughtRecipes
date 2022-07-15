@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/w3.css"/>
+        <link rel="stylesheet" href="/static/font-awesome.css"/>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body class="w3-mobile" style="margin-left:10%; margin-right:10%; padding:0px; background-color: lightgray;">
+        <div class="w3-white">
+            <div class="w3-card">
+                <div class="w3-container w3-margin-left">
+                    <br/>
+                    <h1>Thought Recipes</h1>
+                    <h3>Math, programming, and related musings</h3>
+                    <br/>
+                </div>
+                <div class="w3-bar w3-black w3-border-top">
+                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-bars"></i></a>
+                    
+{% if curr_page == 'Home' %}
+                    <a href="/" class="w3-bar-item w3-button w3-green">Home</a>
+{% else %}
+                    <a href="/" class="w3-bar-item w3-button">Home</a>
+{% endif %}
+
+{% if curr_page == 'Recipes' %}
+                    <a href="recipes" class="w3-bar-item w3-button w3-green">Recipes</a>
+{% else %}
+                    <a href="recipes" class="w3-bar-item w3-button">Recipes</a>
+{% endif %}
+
+{% if curr_page == 'Stuff' %}
+                    <a href="stuff" class="w3-bar-item w3-button w3-green">Stuff</a>
+{% else %}
+                    <a href="stuff" class="w3-bar-item w3-button">Stuff</a>
+{% endif %}
+
+{% if curr_page == 'About' %}
+                    <a href="about" class="w3-bar-item w3-button w3-green">About</a>
+{% else %}
+                    <a href="about" class="w3-bar-item w3-button">About</a>
+{% endif %}
+
+                    <div class="w3-right">
+                        <input type="text" class="w3-bar-item w3-white w3-input" placeholder="Search..">
+                        <a href="#" class="w3-bar-item w3-button w3-green"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-card">
+                <div class="w3-margin-left w3-margin-right">
+                    <br/>
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
