@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="/static/w3.css"/>
         <link rel="stylesheet" href="/static/font-awesome.css"/>
+        <link rel="stylesheet" href="/static/base.css"/>
+        <script type="text/javascript" src='/static/jquery.js'></script>
+        <script type="text/javascript" src='/static/base.js'></script>
         {% block head %}
         {% endblock %}
     </head>
@@ -10,7 +13,7 @@
         <div class="w3-white">
             <div class="w3-card">
                 <a href="https://github.com/ReedDahle/ThoughtRecipes" class="w3-right">
-                    <img src="/static/github-corner-right.svg"/>
+                    <img src="/static/github-corner-right.svg" alt="Fork me on Github"/>
                 </a>
                 <div class="w3-container w3-margin-left w3-left">
                     <br/>
@@ -19,8 +22,7 @@
                     <br/>
                 </div>
                 <div class="w3-bar w3-black w3-border-top">
-                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-bars"></i></a>
-                    
+                    <a href="#" id="menuButton" class="w3-bar-item w3-button"><i class="fa fa-bars"></i></a>
 {% if curr_page == 'Home' %}
                     <a href="/" class="w3-bar-item w3-button w3-green">Home</a>
 {% else %}
@@ -51,8 +53,13 @@
                     </div>
                 </div>
             </div>
+            <div class="w3-bar-block w3-collapse w3-card w3-left w3-cell" style="width:200px;" id="menu">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
             <div class="w3-card">
-                <div class="w3-margin-left w3-margin-right">
+                <div class="w3-margin-left w3-margin-right w3-cell">
                     <br/>
                     {% block body %}
                     {% endblock %}
