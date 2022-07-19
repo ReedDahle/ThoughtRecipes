@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="/static/w3.css"/>
         <link rel="stylesheet" href="/static/font-awesome.css"/>
         <link rel="stylesheet" href="/static/base.css"/>
-        <script type="text/javascript" src='/static/jquery.js'></script>
         <script type="text/javascript" src='/static/base.js'></script>
         {% block head %}
         {% endblock %}
@@ -22,7 +21,7 @@
                     <br/>
                 </div>
                 <div class="w3-bar w3-black w3-border-top">
-                    <a href="#" id="menuButton" class="w3-bar-item w3-button"><i class="fa fa-bars"></i></a>
+                    <div id="menuButton" class="w3-bar-item w3-button" onclick="onMenuButtonClick()"><i class="fa fa-bars"></i></div>
 {% if curr_page == 'Home' %}
                     <a href="/" class="w3-bar-item w3-button w3-green">Home</a>
 {% else %}
@@ -53,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w3-bar-block w3-collapse w3-card w3-left w3-cell" style="width:200px;" id="menu">
+            <div class="w3-bar-block w3-collapse w3-card w3-left w3-cell" style="width: 200px; display: none;" id="menu">
                 <a href="#" class="w3-bar-item w3-button">Link 1</a>
                 <a href="#" class="w3-bar-item w3-button">Link 2</a>
                 <a href="#" class="w3-bar-item w3-button">Link 3</a>
