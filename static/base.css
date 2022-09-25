@@ -1,0 +1,17 @@
+@media (min-width: 1000px) {
+    #sidebars {
+        margin-left:10%;
+        margin-right:10%;
+        padding:0px;
+        background-color: lightgray;
+    }
+}
+
+@media (min-width: 1500px) {
+    #sidebars {
+        margin-left:20%;
+        margin-right:20%;
+        padding:0px;
+        background-color: lightgray;
+    }
+}

@@ -1,0 +1,5 @@
+@media (min-width: 22em) {
+    #navbar > a {
+        width: 25% !important;
+    }
+}

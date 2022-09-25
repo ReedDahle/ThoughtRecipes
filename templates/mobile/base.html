@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="/static/w3.css"/>
         <link rel="stylesheet" href="/static/font-awesome.css"/>
-        <link rel="stylesheet" href="/static/base.css"/>
+        <link rel="stylesheet" href="/static/base-mobile.css"/>
         <script type="text/javascript" src='/static/base.js'></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,37 +24,37 @@
                 </div>
                 <div id="navbar" class="w3-bar w3-black w3-border-top w3-mobile">
 {% if curr_page == 'Home' %}
-                    <a href="/" class="w3-bar-item w3-button w3-green">Home</a>
+                    <a href="/" class="w3-bar-item w3-button w3-mobile w3-green">Home</a>
 {% else %}
-                    <a href="/" class="w3-bar-item w3-button">Home</a>
+                    <a href="/" class="w3-bar-item w3-button w3-mobile">Home</a>
 {% endif %}
 
 {% if curr_page == 'Recipes' %}
-                    <a href="recipes" class="w3-bar-item w3-button w3-green">Recipes</a>
+                    <a href="recipes" class="w3-bar-item w3-button w3-mobile w3-green">Recipes</a>
 {% else %}
-                    <a href="recipes" class="w3-bar-item w3-button">Recipes</a>
+                    <a href="recipes" class="w3-bar-item w3-button w3-mobile">Recipes</a>
 {% endif %}
 
 {% if curr_page == 'Stuff' %}
-                    <a href="stuff" class="w3-bar-item w3-button w3-green">Stuff</a>
+                    <a href="stuff" class="w3-bar-item w3-button w3-mobile w3-green">Stuff</a>
 {% else %}
-                    <a href="stuff" class="w3-bar-item w3-button">Stuff</a>
+                    <a href="stuff" class="w3-bar-item w3-button w3-mobile">Stuff</a>
 {% endif %}
 
 {% if curr_page == 'About' %}
-                    <a href="about" class="w3-bar-item w3-button w3-green">About</a>
+                    <a href="about" class="w3-bar-item w3-button w3-mobile w3-green">About</a>
 {% else %}
-                    <a href="about" class="w3-bar-item w3-button">About</a>
+                    <a href="about" class="w3-bar-item w3-button w3-mobile">About</a>
 {% endif %}
-
-                    <div class="w3-right">
-                        <input type="text" class="w3-bar-item w3-white w3-input" placeholder="Search..">
-                        <a href="#" class="w3-bar-item w3-button w3-green">
-                            <img id="search-icon" src="/static/icons/magnifying-glass.svg" width="16px" height="16px" alt="Go" />
-                        </a>
-                    </div>
+                </div>
+                <div class="w3-bar w3-mobile">
+                    <input type="text" class="w3-bar-item w3-white w3-input" placeholder="Search.." style="width: calc(100% - 48px);">
+                    <a href="#" class="w3-bar-item w3-button w3-green">
+                        <img id="search-icon" src="/static/icons/magnifying-glass.svg" width="16px" height="16px" alt="Go" />
+                    </a>
                 </div>
             </div>
+            
             <div class="w3-card">
                 <div class="w3-margin-left w3-margin-right w3-cell">
                     <br/>
